@@ -8,9 +8,11 @@ end
 
 RSpec.describe PostRepository do
     before(:each) { reset_posts_table }
-    repo = PostRepository.new
-    post = repo.find_with_comments(1)
-    expect(post.id).to eq '1'
-    expect(post.comments.size).to eq 2
-    expect(post.comments.last.id).to eq '2'
+    it "Returns a post with its comments" do
+        repo = PostRepository.new
+        post = repo.find_with_comments(1)
+        expect(post.id).to eq "1"
+        expect(post.comments.size).to eq 2
+        expect(post.comments.last.id).to eq "2"
+    end
 end

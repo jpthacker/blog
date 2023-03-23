@@ -1,4 +1,4 @@
-require 'database_connection'
+require "database_connection"
 
 DatabaseConnection.connect('blog_test')
 
