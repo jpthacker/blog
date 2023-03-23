@@ -27,6 +27,7 @@ class PostRepository
             comment = Comment.new
             comment.id = record['comment_id']
             comment.content = record['content']
+            comment.author_name = record['author_name']
             post.comments << comment
         end
         return post
